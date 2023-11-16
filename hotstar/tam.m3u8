@@ -3,10 +3,10 @@
 #EXT-X-VERSION:3
 #EXT-X-INDEPENDENT-SEGMENTS
 #EXT-X-STREAM-INF:BANDWIDTH=180400,AVERAGE-BANDWIDTH=162800,CODECS="hvc1.1.6.L60.B0,mp4a.40.2",RESOLUTION=320x180,FRAME-RATE=25.000
-https://live13p.hotstar.com/hls/live/2027121/inallow-icccwc-2023/tam/1540025298/15mindvrm01388701e282c8447abd5d3aef292ffb4315november2023/master_apmf_180_1.m3u8
+https://live13p.hotstar.com/hls/live/2027121/inallow-icccwc-2023/tam/1540025301/15mindvrm014f2bdd41dc504af9b7b35d56e483ea6216november2023/master_apmf_180_1.m3u8
 #EXT-X-STREAM-INF:BANDWIDTH=231440,AVERAGE-BANDWIDTH=206800,CODECS="hvc1.1.6.L63.B0,mp4a.40.2",RESOLUTION=426x240,FRAME-RATE=25.000
-https://live13p.hotstar.com/hls/live/2027121/inallow-icccwc-2023/tam/1540025298/15mindvrm01388701e282c8447abd5d3aef292ffb4315november2023/master_apmf_240_2.m3u8
+https://live13p.hotstar.com/hls/live/2027121/inallow-icccwc-2023/tam/1540025301/15mindvrm014f2bdd41dc504af9b7b35d56e483ea6216november2023/master_apmf_240_2.m3u8
 #EXT-X-STREAM-INF:BANDWIDTH=276100,AVERAGE-BANDWIDTH=245300,CODECS="hvc1.1.6.L63.B0,mp4a.40.2",RESOLUTION=640x360,FRAME-RATE=25.000
-https://live13p.hotstar.com/hls/live/2027121/inallow-icccwc-2023/tam/1540025298/15mindvrm01388701e282c8447abd5d3aef292ffb4315november2023/master_apmf_360_3.m3u8
+https://live13p.hotstar.com/hls/live/2027121/inallow-icccwc-2023/tam/1540025301/15mindvrm014f2bdd41dc504af9b7b35d56e483ea6216november2023/master_apmf_360_3.m3u8
 #EXT-X-STREAM-INF:BANDWIDTH=434500,AVERAGE-BANDWIDTH=393800,CODECS="hvc1.1.6.L90.B0,mp4a.40.2",RESOLUTION=854x480,FRAME-RATE=25.000
-https://live13p.hotstar.com/hls/live/2027121/inallow-icccwc-2023/tam/1540025298/15mindvrm01388701e282c8447abd5d3aef292ffb4315november2023/master_apmf_480_4.m3u8
+https://live13p.hotstar.com/hls/live/2027121/inallow-icccwc-2023/tam/1540025301/15mindvrm014f2bdd41dc504af9b7b35d56e483ea6216november2023/master_apmf_480_4.m3u8
