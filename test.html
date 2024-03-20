@@ -1,57 +1,80 @@
+<!doctype html>
 <html>
-  
-<head> 
-  <script type='text/javascript' src='//pl19481540.highrevenuegate.com/6d/ec/9d/6dec9d65f3d02515c72f749a53c438ec.js'></script>
-  <script type='text/javascript' src='//pl19465160.highrevenuegate.com/93/e4/93/93e493266718c24a32b16074d28048b1.js'></script>
+<head>
+	<title>AdBlock</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+	<link href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.7/styles/default.min.css" rel="stylesheet">
+<style>
+	h5.bg-success,h5.bg-danger {
+		padding: 8px;
+		border: 1px solid #cccccc;
+		border-radius: 4px;
+		text-align: center;
+	}
+	.center {
+	   width: 300px;
+	   height: 300px;
+	   position: absolute;
+	   left: 50%;
+	   top: 50%; 
+	   margin-left: -150px;
+	   margin-top: -150px;
+	}
+	.below {
+	   width: 300px;
+	   height: 300px;
+	   position: absolute;
+	   left: 60%;
+	   top: 60%; 
+	   margin-left: -150px;
+	   margin-top: -150px;
+	}
+</style>
 </head>
-  
-<title> Sports 18 Khel  |  Avdhesh Kushwah LIVE </title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width">
-<link rel="shortcut icon" href="/favicon.ico" />
-<script disable-devtool-auto='true' src='https://cdn.jsdelivr.net/npm/disable-devtool' clear-log='true'
-  disable-select='true' disable-copy='true' disable-cut='true' disable-paste='true'></script>
-<script src="/js/prodevs.js"></script>
-<link rel="stylesheet" href="/css/jw.css">
-<script src="/js/jw-topleft.js"></script>
+<body>
+		<div class="center">
+				<h5 class="bg-success" id="adb-not-enabled" style="display: none;">AdBlock is disabled</h5>
+				<h5 class="bg-danger" id="adb-enabled" style="display: none;">AdBlock is enabled</h5>
+		</div>
+		<div class="below">
+			<input TYPE="button" onClick="history.go(0)" VALUE="Reload Page">
+		</div>
 
-<div id="jwplayerDiv"></div>
-<script type="text/javascript">
-
-    jwplayer("jwplayerDiv").setup({
-    title: "CHANNEL NAME",
-    description: "Live Watching on Avdhesh Kushwah LIVE",
-    image: "https://i.ibb.co/jT2ytnX/player-cover.jpg",
-    stretching: "exactfit",
-    logo: {
-      file: "https://i.ibb.co/hypGhV5/logo.gif",
-      link: "https://aklive.bio.link",
-      hide: false,
-      position: "top-left"
-    },
-    file: "https://dai.google.com/ssai/event/dBdwOiGaQvy0TA1zOsjV6w/master.m3u8",
-    type: "dash",
-      
-  }).on('ready', function () {
-    // Set poster image for video element to avoid black background for audio-only programs.
-    var video = document.getElementById(this.id).getElementsByTagName('video')[0];
-    if (video) video.setAttribute('poster', this.getConfig().image);
-
-  });
-  
-</script>
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
-        <link rel="stylesheet" href="/css/ad/style.css" />
-    </head>
-    <body>
-        <div id="bait">
-            <div class="ads"></div>
-        </div>
-    </body>
-    <script src="/css/ad/checker.js"></script>
-  
+	<script src="./adblockDetector.js"></script>
+	<script>
+	// Configure the adblock detector
+	(function(){
+		var enabledEl = document.getElementById('adb-enabled');
+		var disabledEl = document.getElementById('adb-not-enabled');
+		function adBlockDetected() {
+			enabledEl.style.display = 'block';
+			disabledEl.style.display = 'none';
+		}
+		function adBlockNotDetected() {
+			disabledEl.style.display = 'block';
+			enabledEl.style.display = 'none';
+		}
+		
+		if(typeof window.adblockDetector === 'undefined') {
+			adBlockDetected();
+		} else {
+			window.adblockDetector.init(
+				{
+					debug: true,
+					found: function(){
+						adBlockDetected();
+					},
+					notFound: function(){
+						adBlockNotDetected();
+					}
+				}
+			);
+		}
+	}());
+	</script>
+		
+</body>
 </html>
