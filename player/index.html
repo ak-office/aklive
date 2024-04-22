@@ -67,21 +67,22 @@
 <br>
 
 <div class="text-center my-wrap pt-5 pb-5 >
-  <h1 class="h3 mb-3 font-weight-bold text-uppercase" style="color: var(--e_blue)">Network Streamer</h1>
+  <h1 class="h3 mb-3 font-weight-bold text-uppercase" style="font-weight: bold; font-size: 14px; color: white; text-align: center;">Online Player  |  AK LIVE </h1>
   <div class="custom-form">
     <div class="custom-form-label">
-        <label for="userid">Paste url Here</label>
+        <label for="userid" >Paste Video Url Here</label>
     </div>
-    <input type="url" id="link" class="custom-form-control" placeholder="" required="" value="" style="width: 80%;">
+    <input type="url" id="link" class="custom-form-control" placeholder="Paste Video Url Here" required="" value="" style="width: 80%;">
     <br><br>
     <div class="buttons">  
 
-        <button  rel="stream" id="clickkaltura" type="button" class="btn btn-dark" style="padding-left: 3rem; padding-right: 3rem;" >Stream kaltura Player</button>
-        <button  rel="stream" id="clicknetflix" type="button" class="btn btn-danger" style="padding-left: 3rem; padding-right: 3rem;" >Stream Netflix Player</button>
+
 
    <button  rel="stream" id="clickjw" type="button" class="btn btn-warning" style="padding-left: 3rem; padding-right: 3rem;" > JW Player</button>
-<button  rel="stream" id="clickply" type="button" class="btn btn-primary" style="padding-left: 3rem; padding-right: 3rem;" >ply-custom Player</button>
-    <button  rel="stream" id="clickclapper" type="button" class="btn btn-success" style="padding-left: 3rem; padding-right: 3rem;" >Clapper Player</button>
+   <button  rel="stream" id="clickply" type="button" class="btn btn-primary" style="padding-left: 3rem; padding-right: 3rem;" >Ply-Custom Player</button>
+   <button  rel="stream" id="clickclapper" type="button" class="btn btn-success" style="padding-left: 3rem; padding-right: 3rem;" >Clapper Player</button>
+   <button  rel="stream" id="clickkaltura" type="button" class="btn btn-dark" style="padding-left: 3rem; padding-right: 3rem;" > Kaltura Player</button>
+   <button  rel="stream" id="clicknetflix" type="button" class="btn btn-danger" style="padding-left: 3rem; padding-right: 3rem;" > Netflix Player</button>
     
 
     
@@ -98,7 +99,7 @@
 
 
 <div class="footer bg-dark text-light">
-  <span class="text-danger">Spidyworld</span> | &nbsp; Tamplate Designed By&nbsp; <span class="text-danger">&nbsp;Maxmentor</span>    </div>
+  <span class="text-danger">AK LIVE </span> | &nbsp; Tamplate Designed By&nbsp; <span class="text-danger">&nbsp;AK LIVE</span>    </div>
    
  
 
@@ -131,5 +132,79 @@ function _0x415e(_0x2a5773,_0xbdbcf9){var _0x54cf11=_0x54cf();return _0x415e=fun
       
 </script>
  
-</body>
-</html>
+    <div class="footer">
+      <div style="display:inline-block">
+        <b><a href=""><button class="btn-11 custom-btn"
+              style="width:70vw;height:40px;margin-top:10px;font-size:15px; font-family: 'Oswald', sans-serif">Made By AK </button></a><b></b></b>
+        <div class="stwRainbow"></div> </noscript>
+        <div class="stwBlurRainbow"></div> <br>
+
+
+        <script>
+          $(document).ready(function () {
+            var dftr = $('select.dftr'),
+              headerCount = $('#headerCount');
+            headerCount.html('select a filter or use search');
+            dftr.on('change', function () {
+              dftr.attr('disabled', 'disabled');
+              var records = $('#tvvTable').find('.tvv-item');
+              records.hide();
+              var critriaAttributes = [];
+              dftr.each(function () {
+                var $this = $(this),
+                  $selectedLength = $this.find(':selected').length,
+                  $critriaAttribute = '';
+                if ($selectedLength > 0 && $this.val() != '0') {
+                  if ($selectedLength == 1) {
+                    $critriaAttribute += '[data-' + $this.data('attribute') + '*="' + $this.val() + '"]';
+                  } else {
+                    var $startDataAttribute = '[data-' + $this.data('attribute') + '*="',
+                      $endDataAttribute = '"]',
+                      $selectedValues = $this.val().toString();
+                    $critriaAttribute += $startDataAttribute + $selectedValues.replaceAll(',', ($endDataAttribute + ',' + $startDataAttribute)) + $endDataAttribute;
+                  }
+                  critriaAttributes.push($critriaAttribute);
+                }
+              });
+              var $showRecords = records;
+              if (critriaAttributes.length > 0) {
+                $.each(critriaAttributes, function (i, filterValue) {
+                  $showRecords = $showRecords.filter(filterValue);
+                });
+              }
+              $showRecords.show();
+              headerCount.html($showRecords.length + ' channels filtered');
+              dftr.removeAttr('disabled');
+              $(".fin").val('');
+            });
+            $(".fin").keyup(function () {
+              var filter = $(this).val(),
+                count = 0;
+              $('select.dftr').prop('selectedIndex', 0);
+              $(".tvv-item").each(function () {
+                if ($(this).text().search(new RegExp(filter, "i")) < 0) {
+                  $(this).fadeOut();
+                } else {
+                  $(this).show();
+                  count++;
+                }
+              });
+            });
+          });
+        </script>
+
+        <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+
+        </b></b>
+        </body>
+
+
+        <br>
+        <center>
+          <script type="text/javascript" src="//widget.supercounters.com/ssl/online_i.js"></script>
+          <script type="text/javascript">sc_online_i(1661904, "ffffff", "e61c1c");</script><br><noscript>
+        </center>
+        </br> <br>
+
+        </html>
